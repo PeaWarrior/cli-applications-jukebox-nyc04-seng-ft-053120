@@ -41,4 +41,5 @@ def run(songs)
     when "list"
       list(songs)
     end
+  end
 end
