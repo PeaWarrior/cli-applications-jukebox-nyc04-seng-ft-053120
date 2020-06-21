@@ -32,7 +32,9 @@ end
 def run(songs)
   puts "Please enter a command:"
   input = gets.chomp
-  if input != "exit"
+  if input == "exit"
+    exit_jukebox
+  else
     case input
     when "play"
       play(songs)
@@ -41,6 +43,6 @@ def run(songs)
     when "list"
       list(songs)
     end
-  else exit_jukebox
+    run(songs)
   end
 end
