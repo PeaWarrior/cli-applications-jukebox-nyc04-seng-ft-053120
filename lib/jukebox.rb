@@ -24,3 +24,21 @@ def play(songs)
   end
   puts "Invalid input, please try again"
 end
+
+def exit_jukebox
+  puts "Goodbye"
+end
+
+def run(songs)
+  puts "Please enter a command:"
+  input = gets.chomp
+  if input != "exit"
+    case input
+    when "play"
+      play(songs)
+    when "help"
+      help
+    when "list"
+      list(songs)
+    end
+end
